@@ -6,6 +6,15 @@ class Order():
         self.order.append(dessertitem)
     def __len__(self):
         return len(self.order)
+    def order_cost(self):
+        cost = 0.0
+        for item in self.order:
+            cost += self.item.calculate_cost()
+        return cost
+    def order_tax(self):
+        tax = 0.0
+        for item in self.order:
+            tax += self.item.calculate_cost() * (self.tax_percent/100)
     
 def main():
     order1 = Order()

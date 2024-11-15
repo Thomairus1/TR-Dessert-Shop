@@ -1,4 +1,6 @@
 from dessert import DessertItem, Candy, Cookie, IceCream, Sundae
+from receipt import make_receipt, main
+
 class Order():
     def __init__(self):
         self.order = []
@@ -31,5 +33,6 @@ def main():
     order1.add(Cookie("Oatmeal Raisin", 2, 3.45))
     print("Oatmeal Raisin")
     print(f"Total number of items in order: {order1.__len__()}")
+    
 
 main()

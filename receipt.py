@@ -6,7 +6,7 @@ from reportlab.lib.styles import getSampleStyleSheet
 
 def make_receipt(data, out_file_name):
     # creating a Base Document Template of page size A4 
-    pdf = SimpleDocTemplate( "receipt.pdf" , pagesize = A4 ) 
+    pdf = SimpleDocTemplate(out_file_name , pagesize = A4 ) 
     
     # standard stylesheet defined within reportlab itself 
     styles = getSampleStyleSheet() 
@@ -43,7 +43,8 @@ def make_receipt(data, out_file_name):
     # actual pdf putting together all the elements 
     print(pdf.build([ title , table ]))
 
-def main():
+
+def main1():
     # data which we are going to display as tables 
     DATA = [ 
         ["Name", "Item Cost", "Tax" ], 
@@ -55,6 +56,4 @@ def main():
         ["Oatmeal Raisin", 0.57, 0.04] 
     ] 
 
-    make_receipt(DATA, "receipt")
-
-main()
+    make_receipt(DATA, "receipt.pdf")

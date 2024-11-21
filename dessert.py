@@ -1,10 +1,16 @@
+from abc import ABC
+
 class DessertItem:
-    def __init__(self, name):
+    def __init__(self, name, tax_percent):
         self.name = name
+        self.tax_percent = 7.25
     def __str__(self):
         return f"You ordered a {self.name}"
     def get_name(self):
         return self.name
+    
+    def calculate_tax(self):
+        return self.calculate_cost() * (self.tax_percent/100)
     
 class Candy(DessertItem):
     def __init__(self, name, candy_weight, price_per_pound):

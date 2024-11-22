@@ -1,6 +1,6 @@
-from abc import ABC
+from abc import ABC, abstractmethod
 
-class DessertItem:
+class DessertItem(ABC):
     def __init__(self, name, tax_percent):
         self.name = name
         self.tax_percent = 7.25
@@ -11,7 +11,8 @@ class DessertItem:
     def calculate_tax(self):
         return self.calculate_cost() * (self.tax_percent/100)
 
-    def calculate_tax(self):
+    @abstractmethod
+    def calculate_cost(self):
         pass
     
 class Candy(DessertItem):

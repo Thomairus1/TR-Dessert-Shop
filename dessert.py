@@ -8,9 +8,11 @@ class DessertItem:
         return f"You ordered a {self.name}"
     def get_name(self):
         return self.name
-    
     def calculate_tax(self):
         return self.calculate_cost() * (self.tax_percent/100)
+
+    def calculate_tax(self):
+        pass
     
 class Candy(DessertItem):
     def __init__(self, name, candy_weight, price_per_pound):

@@ -41,7 +41,7 @@ class Cookie(DessertItem):
     
 class IceCream(DessertItem):
     def __init__(self, name, scoop_count, price_per_scoop):
-        super().__init__(name)
+        super().__init__(name,)
         self.scoop_count = scoop_count
         self.price_per_scoop = price_per_scoop
     def get_scoop_count(self):
@@ -52,8 +52,8 @@ class IceCream(DessertItem):
         return self.scoop_count * self.price_per_scoop
 
 class Sundae(IceCream):
-    def __init__(self, name, scoop_count, price_per_scoop, topping_name, topping_price):
-        super().__init__(name, scoop_count, price_per_scoop)
+    def __init__(self, name, scoop_count, price_per_scoop, topping_name, topping_price, tax_percent):
+        super().__init__(name, scoop_count, price_per_scoop, tax_percent)
         self.topping_name = topping_name
         self.topping_price = topping_price
     def get_topping_name(self):

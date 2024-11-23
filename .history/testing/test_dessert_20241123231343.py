@@ -69,8 +69,9 @@ def test_calculate_tax():
 
     ice_cream = IceCream("Vanilla", 2, 2.99)
     tax = ice_cream.calculate_cost() * (7.25/100)
-    assert ice_cream.calculate_tax() == tax
+    assert ice_cream.calculate_tax == tax
+
 
     sundae = Sundae("Rocky Road", 2, 3.11, "Cherry", 1.00)
     tax = sundae.calculate_cost() * (7.25/100)
-    assert sundae.calculate_tax() == tax
+    assert sundae.calculate_tax == tax

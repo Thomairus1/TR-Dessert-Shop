@@ -74,7 +74,7 @@ class DessertShop():
         print("Type in the name of the ice cream(str), the scoop count(int), the price per scoop(float), topping name(str), and topping price(float).")
         while True:
             sundae_name = input("Ice cream name: ")
-            if isinstance(sundae_name, str):
+            if isinstance(sundae_name_name, str):
                 break
             else:
                 print("That's not a string. Type in a string.")

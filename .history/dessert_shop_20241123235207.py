@@ -71,10 +71,10 @@ class DessertShop():
     def user_prompt_ice_cream(self):
         pass
     def user_prompt_sundae(self):
-        print("Type in the name of the ice cream(str), the scoop count(int), the price per scoop(float), topping name(str), and topping price(float).")
+        print("Type in the name of the ice cream(str), the scoop count(int), and the price per se(float).")
         while True:
-            sundae_name = input("Ice cream name: ")
-            if isinstance(sundae_name, str):
+            cookie_name = input("Cookie name: ")
+            if isinstance(cookie_name, str):
                 break
             else:
                 print("That's not a string. Type in a string.")

@@ -44,9 +44,6 @@ class DessertShop():
                 print("That's not a float. Type in a float.")
                 continue
 
-        candy1 = Candy(candy_name, weight, price)
-        return candy1    
-
     def user_prompt_cookie(self):
         print("Type in the name of the cookie(str), the amount of cookies(int), and the price per dozen(float).")
         while True:
@@ -69,13 +66,10 @@ class DessertShop():
                 break
             else:
                 print("That's not a float. Type in a float.")
-                continue    
-
-        cookie1 = Cookie(cookie_name, amount, price_12)
-        return cookie1    
+                continue
 
     def user_prompt_ice_cream(self):
-        print("Type in the name of the ice cream (str), the amount of scoops (int), and the price per scoop (flt)")
+        print("Type in the name of the icecream (str), the amount of scoops (int), and the price per scoop (flt)")
         while True:
             icecream_name = input("Icecream name: ")
             if isinstance(icecream_name, str):
@@ -92,15 +86,11 @@ class DessertShop():
                 continue
         while True:
             scooby_price = float(input("Price per scoop: "))
-            if isinstance(scooby_price, float):
+            if isinstance(scooby_price, float)
                 break
             else:
                 print("That's not a float...")
                 continue
-            
-        icecream1 = IceCream(icecream_name, scooby_number, scooby_price)
-        return icecream1
-        
     def user_prompt_sundae(self):
         print("Type in the name of the ice cream(str), the scoop count(int), the price per scoop(float), topping name(str), and topping price(float).")
         while True:
@@ -111,37 +101,19 @@ class DessertShop():
                 print("That's not a string. Type in a string.")
                 continue
         while True:        
-            scoop_num = int(input("Amount of scoops: "))
-            if isinstance(scoop_num, int):
+            amount = int(input("Amount of cookies: "))
+            if isinstance(amount, int):
                 break
             else:
-                print("That's not an integer. Type in an integer.")
+                print("That's not a integer. Type in a integer.")
                 continue
         while True:
-            scoop_price = float(input("Price per scoop: "))
-            if isinstance(scoop_price, float):
+            price_12 = int(input("Price per dozen: "))
+            if isinstance(price_12, float):
                 break
             else:
                 print("That's not a float. Type in a float.")
                 continue
-        while True:
-            topping_name = input("Price per scoop: ")
-            if isinstance(topping_name, str):
-                break
-            else:
-                print("That's not a string. Type in a string.")
-                continue
-        while True:
-            topping_price = float(input("Price per scoop: "))
-            if isinstance(topping_price, float):
-                break
-            else:
-                print("That's not a float. Type in a float.")
-                continue
-
-        sundae1 = Sundae(sundae_name, scoop_num, scoop_price, topping_name, topping_price)
-        return sundae1
-    
     
 def main(Order):
     shop = DessertShop()

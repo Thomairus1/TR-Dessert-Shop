@@ -30,7 +30,7 @@ class DessertShop():
                 print("That's not a string. Type in a string.")
                 continue
         while True:        
-            weight = float(input("Candy weight in pounds: "))
+            weight = input("Candy weight in pounds: "))
             if isinstance(weight, float):
                 break
             else:

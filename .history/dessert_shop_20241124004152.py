@@ -74,7 +74,7 @@ class DessertShop():
         cookie1 = Cookie(cookie_name, amount, price_12)
         return cookie1    
 
-    def user_prompt_icecream(self):
+    def user_prompt_ice_cream(self):
         print("Type in the name of the ice cream (str), the amount of scoops (int), and the price per scoop (flt)")
         while True:
             icecream_name = input("Icecream name: ")

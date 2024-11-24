@@ -31,7 +31,7 @@ class DessertShop():
                 continue
         while True:        
             weight = float(input("Candy weight in pounds: "))
-            if isinstance(weight, float):
+            try isinstance(weight, float):
                 break
             else:
                 print("That's not a float. Type in a float.")

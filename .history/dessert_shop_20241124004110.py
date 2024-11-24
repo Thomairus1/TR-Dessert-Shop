@@ -30,14 +30,14 @@ class DessertShop():
                 print("That's not a string. Type in a string.")
                 continue
         while True:        
-            weight = float(input("Candy weight in pounds: "))
+            weight = int(input("Candy weight in pounds: "))
             if isinstance(weight, float):
                 break
             else:
                 print("That's not a float. Type in a float.")
                 continue
         while True:
-            price = float(input("Price per pounds: "))
+            price = int(input("Price per pounds: "))
             if isinstance(price, float):
                 break
             else:
@@ -74,7 +74,7 @@ class DessertShop():
         cookie1 = Cookie(cookie_name, amount, price_12)
         return cookie1    
 
-    def user_prompt_icecream(self):
+    def user_prompt_ice_cream(self):
         print("Type in the name of the ice cream (str), the amount of scoops (int), and the price per scoop (flt)")
         while True:
             icecream_name = input("Icecream name: ")

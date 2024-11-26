@@ -201,7 +201,7 @@ def main(Order):
                 print('Invalid response: Please enter a choice from the menu (1-4) or Enter')
         print()
 
-    data = []
+    data = [["Name", "Amount", "Price"]]
     for item in order.order:
         if isinstance(item, Candy):
             data.append([item.name, item.candy_weight, item.price_per_pound])

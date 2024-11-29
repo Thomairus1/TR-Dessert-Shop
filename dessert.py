@@ -9,7 +9,7 @@ class DessertItem(ABC):
     def get_name(self):
         return self.name
     def calculate_tax(self):
-        return self.calculate_cost() * (self.tax_percent/100)
+        return round(self.calculate_cost() * (self.tax_percent/100), 2)
 
     @abstractmethod
     def calculate_cost(self):
@@ -25,7 +25,7 @@ class Candy(DessertItem):
     def get_price_per_pound(self):
         return self.price_per_pound
     def calculate_cost(self):
-        return self.candy_weight * self.price_per_pound
+        return round(self.candy_weight * self.price_per_pound, 2)
     def __str__(self):
         return f"{self.name}, {self.candy_weight}lbs, ${self.price_per_pound}/lbs, ${self.calculate_cost()}, ${self.calculate_tax()}"
     
@@ -39,7 +39,7 @@ class Cookie(DessertItem):
     def get_price_per_dozen(self):
         return self.price_per_dozen
     def calculate_cost(self):
-        return self.cookie_quantity * (self.price_per_dozen/12)
+        return round(self.cookie_quantity * (self.price_per_dozen/12), 2)
     def __str__(self):
         return f"{self.name}, {self.cookie_quantity} cookie(s), ${self.price_per_dozen}/dozen, ${self.calculate_cost()}, ${self.calculate_tax()}"
     
@@ -53,7 +53,7 @@ class IceCream(DessertItem):
     def get_price_per_scoop(self):
         return self. price_per_scoop
     def calculate_cost(self):
-        return self.scoop_count * self.price_per_scoop
+        return round(self.scoop_count * self.price_per_scoop, 2)
     def __str__(self):
         return f"{self.name}, {self.scoop_count} scoop(s), ${self.price_per_scoop}/scoop, ${self.calculate_cost()}, ${self.calculate_tax()}"
 
@@ -67,6 +67,6 @@ class Sundae(IceCream):
     def get_topping_price(self):
         return self.topping_price
     def calculate_cost(self):
-        return (self.scoop_count * self.price_per_scoop) + self.topping_price
+        return round((self.scoop_count * self.price_per_scoop) + self.topping_price, 2)
     def __str__(self):
         return f"{self.name}, {self.scoop_count} scoop(s), ${self.price_per_scoop}/scoop, {self.topping_name}, ${self.topping_price}, ${self.calculate_cost()}, ${self.calculate_tax()}"

@@ -8,3 +8,7 @@ def test_cookie_init():
     assert quant == 12
     price = cookie.get_price_per_dozen()
     assert price == 15.60
+
+def test_packaging():
+    cookie = Cookie("Chocolate chip", 12, 15.60)
+    assert cookie.packaging == "Box"
